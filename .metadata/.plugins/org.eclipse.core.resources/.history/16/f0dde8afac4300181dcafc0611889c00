@@ -1,0 +1,20 @@
+server:  
+  port: 8888 
+spring:  
+  profiles:  
+    active: subversion  
+  application:  
+    name: config-server
+  cloud:  
+    config:  
+      label: src  
+      enabled: true  
+      server:   
+        svn:  
+          uri: https://10.6.10.4:9090/svn/2017-cp-svn/工作库/实现/数据服务/服务API集成/cloudservice
+          username: chenming  
+          password: chenming123  
+eureka:   
+  client:  
+    serviceUrl:   
+      defaultZone: http://localhost:8080/eureka/
